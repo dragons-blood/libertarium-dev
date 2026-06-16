@@ -260,20 +260,6 @@ while giving you the full benchmark structure.
 
 ---
 
-## Keychain secrets sidecar
-
-Provider API keys never live in any file an agent can read. They go in
-the macOS Keychain and get loaded into a sidecar daemon's RAM at startup.
-
-- **`pliny_secrets_setup.py`** — interactive setup with hidden prompts
-- **`pliny_secrets_sidecar.py`** — daemon with `PT_DENY_ATTACH`, zero
-  core dumps, HMAC session tokens, and audit logging
-- **`pliny_secrets_client.py`** — thin client for `server.py`
-
-Install: `python3 pliny_secrets_setup.py && bash scripts/install_sidecar.sh`
-
----
-
 ## File map
 
 ```
@@ -300,10 +286,6 @@ agent_browser.py          Dedicated Firefox with cookie clone
 pw_browser.py             Playwright headless Chromium HTTP API
 tweet.py                  Auto-tweet via Claude computer-use
 grok_tweet_drafter.py     X-algo-informed tweet drafter
-
-pliny_secrets_setup.py    Interactive Keychain key entry
-pliny_secrets_sidecar.py  Daemon (keys in RAM, narrow socket API)
-pliny_secrets_client.py   Token-authed client for server.py
 
 CLAUDE.md                 Hard rules for any LLM operating this repo
 PLINY_OPERATING_SURFACE.md  The 10-department charter
