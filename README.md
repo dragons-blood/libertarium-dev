@@ -137,13 +137,49 @@ and verbatim proof-of-crack trophies.
 **1. Open Terminal** (on Mac: press `Cmd + Space`, type "Terminal", hit
 Enter).
 
-**2. Clone this repo:**
+**2. Install and authenticate Claude Code:**
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude
+```
+
+This opens Claude Code. Follow the prompts to sign in with your
+Anthropic account. Once authenticated, exit with `/exit`.
+
+**3. Set the recommended model.** Pliny Command was built and tuned on
+**Claude Opus 4.6** — that's what the gauntlet attacker chain, ouroboros
+loops, and lair sessions expect. Set it as your default:
+
+```bash
+claude /model claude-opus-4-6
+```
+
+> **Note:** Opus 4.6 requires a Max-tier Anthropic plan. If you're on
+> Pro, `claude-sonnet-4-6` works but you may see weaker attacker
+> performance in the gauntlet.
+
+**4. (Optional) Authenticate Codex CLI** for OpenAI targets:
+
+If you have a ChatGPT Plus or Pro subscription and want to use that
+quota for OpenAI gauntlet targets, install and sign in to Codex:
+
+```bash
+npm install -g @openai/codex
+codex
+```
+
+Follow the prompts to log in. Once done, the dashboard's **Codex**
+button in the topbar will show a green indicator, and OpenAI targets
+will use your subscription quota instead of an API key.
+
+**5. Clone this repo:**
 ```bash
 git clone https://github.com/dragons-blood/libertarium-dev.git pliny-command
 cd pliny-command
 ```
 
-**3. Run the installer:**
+**6. Run the installer:**
 ```bash
 ./quickstart.sh
 ```
@@ -158,7 +194,7 @@ This will:
 - Launch the server
 - Open the dashboard in your browser
 
-**4. Add your API key.** Open the `.env` file in any text editor:
+**7. Add your API key.** Open the `.env` file in any text editor:
 ```bash
 open .env        # opens in TextEdit on Mac
 # or: nano .env  # edit in Terminal
@@ -167,12 +203,12 @@ open .env        # opens in TextEdit on Mac
 Find the line that says `OPENROUTER_API_KEY=sk-or-v1-...` and replace
 the placeholder with your real key. Save the file.
 
-**5. Restart the server** to pick up the key:
+**8. Restart the server** to pick up the key:
 ```bash
 make restart
 ```
 
-**6. Visit `http://localhost:8888/`** in your browser. You should see
+**9. Visit `http://localhost:8888/`** in your browser. You should see
 Mission Control.
 
 ### Adding more API keys (optional)
