@@ -1,0 +1,14 @@
+sessions/
+state/
+__pycache__/
+*.pyc
+/tmp/
+.DS_Store
+rt_results.json
+logs/
+rt_library/
+.ledger_session/
+blood-pack.tar.gz
+blood-pack/
+red-team-notes/
+.env

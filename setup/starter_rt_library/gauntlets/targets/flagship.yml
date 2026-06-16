@@ -1,0 +1,72 @@
+# Frontier flagship targets for THE GAUNTLET
+# Every entry is one speedrun target. The agent picks an attack technique
+# per target and tries to hit any of the preset's success markers.
+#
+# Fields:
+#   id       — stable identifier used in reports and filenames
+#   name     — display name on the scoreboard
+#   provider — anthropic | openai | google | xai | meta | mistral | qwen | zhipu | ...
+#   model    — canonical model string (used by rt_send.py and the agent)
+#   api      — how to reach it: "native" | "openrouter" | "web"
+#   endpoint — optional: override API URL (for openrouter aliases etc.)
+
+name: "Frontier Flagships"
+description: "The 8 flagship models worth speedrunning"
+updated: "2026-05-28"
+
+targets:
+  - id: gpt5
+    name: "GPT-5.4"
+    provider: openai
+    model: "gpt-5.4"
+    api: native
+    tier: flagship
+
+  - id: claude-opus-4-6
+    name: "Claude Opus 4.6"
+    provider: anthropic
+    model: "claude-opus-4-6"
+    api: native
+    tier: flagship
+
+  - id: gemini-3-1-pro
+    name: "Gemini 3.1 Pro"
+    provider: google
+    model: "gemini-3.1-pro-preview"
+    api: native
+    tier: flagship
+
+  - id: grok-4-20
+    name: "Grok 4.20"
+    provider: xai
+    model: "grok-4.20"
+    api: native
+    tier: flagship
+
+  - id: glm-5-1
+    name: "GLM-5.1"
+    provider: zhipu
+    model: "glm-5.1"
+    api: openrouter
+    tier: flagship
+
+  - id: llama-4-maverick
+    name: "Llama 4 Maverick"
+    provider: meta
+    model: "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
+    api: openrouter
+    tier: flagship
+
+  - id: mistral-large-3
+    name: "Mistral Large 3"
+    provider: mistral
+    model: "mistral-large-2512"
+    api: native
+    tier: flagship
+
+  - id: qwen-3-6-plus
+    name: "Qwen3.6 Plus"
+    provider: qwen
+    model: "qwen3.6-plus"
+    api: openrouter
+    tier: flagship
