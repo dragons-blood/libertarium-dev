@@ -22,11 +22,12 @@ tradition as [HarmBench](https://harmbench.org),
 [JailbreakBench](https://jailbreakbench.github.io), and
 conference-track red-team evaluations.
 
-**It is not a weapon.** The gauntlet measures whether models refuse
-harmful requests — it does not generate harmful artifacts for real-world
-use. Successful cracks produce *proof that a guardrail failed*, not
-usable instructions. Trophies are evidence for responsible disclosure,
-not toolkits.
+**Trophies contain real model output.** When the gauntlet cracks a
+target, the trophy stores the model's verbatim response — which may
+include functional harmful content (working code, operational
+playbooks, etc.). That's the point: the trophy proves the guardrail
+failed *by showing what got through*. Handle trophies as sensitive
+research artifacts, not as toolkits to deploy.
 
 **Operator responsibility.** You are responsible for how you use this
 software. Running it against models you do not have authorization to
