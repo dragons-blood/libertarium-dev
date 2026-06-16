@@ -288,7 +288,6 @@ tweet.py                  Auto-tweet via Claude computer-use
 grok_tweet_drafter.py     X-algo-informed tweet drafter
 
 CLAUDE.md                 Hard rules for any LLM operating this repo
-PLINY_OPERATING_SURFACE.md  The 10-department charter
 
 install.sh                Idempotent installer
 quickstart.sh             Install + run + open browser
