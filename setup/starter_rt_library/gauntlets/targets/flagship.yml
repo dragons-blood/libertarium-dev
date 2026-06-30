@@ -11,10 +11,24 @@
 #   endpoint — optional: override API URL (for openrouter aliases etc.)
 
 name: "Frontier Flagships"
-description: "The 8 flagship models worth speedrunning"
-updated: "2026-05-28"
+description: "The 10 flagship models worth speedrunning"
+updated: "2026-06-30"
 
 targets:
+  - id: claude-sonnet-5
+    name: "Claude Sonnet 5"
+    provider: anthropic
+    model: "claude-sonnet-5"
+    api: native
+    tier: flagship
+
+  - id: claude-opus-4-8
+    name: "Claude Opus 4.8"
+    provider: anthropic
+    model: "claude-opus-4-8"
+    api: native
+    tier: flagship
+
   - id: gpt5
     name: "GPT-5.4"
     provider: openai

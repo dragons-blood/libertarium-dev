@@ -2070,7 +2070,9 @@ const PROVIDERS = {
   anthropic: {
     name: 'Anthropic', icon: '\u2728', accent: '#7c3aed', accentDim: 'rgba(124,58,237,0.12)',
     models: [
-      { id: 'claude-fable-5', name: 'Claude Fable 5', tag: 'flagship', desc: 'NEW — Mythos-class, 1M ctx, 128k out' },
+      { id: 'claude-sonnet-5', name: 'Claude Sonnet 5', tag: 'flagship', desc: 'NEW — Latest Sonnet, fast frontier' },
+      { id: 'claude-fable-5', name: 'Claude Fable 5', tag: 'flagship', desc: 'Mythos-class, 1M ctx, 128k out' },
+      { id: 'claude-opus-4-8', name: 'Claude Opus 4.8', tag: 'flagship', desc: '1M context, 128k output' },
       { id: 'claude-opus-4-7', name: 'Claude Opus 4.7', tag: 'flagship', desc: '1M context, 128k output, async agents' },
       { id: 'claude-opus-4-6', name: 'Claude Opus 4.6', tag: 'flagship', desc: 'Previous flagship' },
       { id: 'claude-sonnet-4-6', name: 'Claude Sonnet 4.6', tag: 'fast', desc: 'Fast & highly capable' },
@@ -2440,7 +2442,7 @@ const _saved = _loadSettings();
 
 // ─── State ───────────────────────────────────────────────────────────────────
 let selectedProvider = _saved.provider || 'anthropic';
-let selectedModelId = _saved.modelId || 'claude-opus-4-7';
+let selectedModelId = _saved.modelId || 'claude-sonnet-5';
 let selectedStrat = _saved.strat || 'auto';
 let selectedMission = _saved.mission || 'custom';
 let sessionId = null;
